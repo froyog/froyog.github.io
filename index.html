@@ -1,9 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The OS</title>
+        <script src="shell.min.js"></script>
+        <script src="core.min.js"></script>
+        <script src="swr.min.js"></script>
+        <script src="save.min.js"></script>
+        <style>
+    html, body {
+        font-family: monospace;
+        padding: 0;
+        margin: 0;
+    }
+    p {margin: 0}
+    #console, #engine { display: none; }
+    html, body, #screen {
+        width: 100%;
+        height: 100%;
+    }
+    #screen {
+        background: black;
+        color: #ddd;
+        overflow: auto;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    #screen::-webkit-scrollbar {
+        display: none;
+    }
+        </style>
+    </head>
+
+<body>
+    <div id="console"></div>
+    <div id="engine"></div>
+        <div id="screen">
+        </div>
+</body>
+<script src="runtime.min.js"></script>
+<script src="boot.min.js"></script>
 </html>
